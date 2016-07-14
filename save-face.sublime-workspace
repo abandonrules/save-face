@@ -1,0 +1,427 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"install"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/chris.mayfield/Downloads/source/assets/maps/map1.json",
+		"/games/golf200x/Golf-200X/Golf_200X.hxproj",
+		"/code/invent/notes/perl qds",
+		"/code/invent/notes/asadsdasasd",
+		"/code/invent/notes/sdfsdfsdfd",
+		"/code/invent/notes/sdfsdfsdf",
+		"/Users/chris.mayfield/Dropbox/notes/nothing compairs to you",
+		"/Users/chris.mayfield/Dropbox/notes/sdfsdfsdf",
+		"/Users/chris.mayfield/Dropbox/notes/sdfasdfsdaf",
+		"/Users/chris.mayfield/Dropbox/notes/dsfsdf",
+		"/Users/chris.mayfield/Dropbox/notes/sdfsdfsadfsadf",
+		"/Users/chris.mayfield/Dropbox/notes/o conf init urllist",
+		"/Users/chris.mayfield/Desktop/emrFBCrawl_22367.ini",
+		"/Users/chris.mayfield/.atom/packages/games/OCD_GJ16/js/overlap-without-physics.js",
+		"/Users/chris.mayfield/.atom/packages/games/OCD_GJ16/deadzone.html",
+		"/Users/chris.mayfield/.atom/packages/games/phaser-examples/package.json",
+		"/Users/chris.mayfield/Dropbox (abandonrules)/notes/#program to start the guide in hadoop then try to",
+		"/Users/chris.mayfield/Dropbox (abandonrules)/notes/4.10.4_RC",
+		"/Users/chris.mayfield/Dropbox (abandonrules)/notes/chown solrcloud:solrcloud :var:log:solrcloud :var:",
+		"/Users/chris.mayfield/Dropbox (abandonrules)/notes/qal=\"-\"",
+		"/Users/chris.mayfield/Dropbox (abandonrules)/notes/wl_notes11.sh",
+		"/Users/chris.mayfield/Dropbox (abandonrules)/notes/java -cp :var:www:html:announcemedia:atlascloud:so",
+		"/Users/chris.mayfield/Dropbox (abandonrules)/notes/untitled.sh",
+		"/Users/chris.mayfield/Dropbox (abandonrules)/notes/rsync -avc :var:www:html:announcemedia:atlascloud",
+		"/Users/chris.mayfield/Dropbox (abandonrules)/notes/new",
+		"/Users/chris.mayfield/Downloads/RPGmakerWebPlugins/Yami/YED_Hospital.js",
+		"/Users/chris.mayfield/.atom/packages/games/livestreamer-twitch-gui/Gruntfile.js",
+		"/Users/chris.mayfield/Dropbox/notes/1123123123",
+		"/Users/chris.mayfield/Dropbox/notes/123123213123",
+		"/Users/chris.mayfield/Dropbox/notes/123123123123",
+		"/Users/chris.mayfield/Dropbox/notes/dassad",
+		"/Users/chris.mayfield/Dropbox/notes/34535445435",
+		"/Users/chris.mayfield/Dropbox/notes/324423324",
+		"/Users/chris.mayfield/Dropbox/notes/3423234234",
+		"/Users/chris.mayfield/Dropbox/notes/234234234",
+		"/Users/chris.mayfield/Dropbox/notes/312123123123",
+		"/Users/chris.mayfield/Dropbox/notes/132123231123",
+		"/Users/chris.mayfield/Dropbox/notes/132123231",
+		"/Users/chris.mayfield/Dropbox/notes/123123213",
+		"/Users/chris.mayfield/Dropbox/notes/123123321213",
+		"/Users/chris.mayfield/Dropbox/notes/12123231213123",
+		"/Users/chris.mayfield/Dropbox/notes/123123123312",
+		"/Users/chris.mayfield/Dropbox/notes/13123312213",
+		"/Users/chris.mayfield/Dropbox/notes/132132312123123",
+		"/Users/chris.mayfield/Dropbox/notes/312123213321",
+		"/Users/chris.mayfield/Dropbox/notes/123123312123",
+		"/Users/chris.mayfield/Dropbox/notes/asasas",
+		"/Users/chris.mayfield/Dropbox/notes/123213123123",
+		"/Users/chris.mayfield/Dropbox/notes/123123231123",
+		"/Users/chris.mayfield/Dropbox/notes/231123123123",
+		"/Users/chris.mayfield/Dropbox/notes/2121",
+		"/Users/chris.mayfield/Dropbox/notes/1212123",
+		"/Users/chris.mayfield/Dropbox/notes/344345",
+		"/Users/chris.mayfield/Dropbox/notes/234342234",
+		"/Users/chris.mayfield/Dropbox/notes/123123321",
+		"/Users/chris.mayfield/Dropbox/notes/23132",
+		"/Users/chris.mayfield/Dropbox/notes/21123123",
+		"/Users/chris.mayfield/Dropbox/notes/121212",
+		"/Users/chris.mayfield/Dropbox/notes/565",
+		"/Users/chris.mayfield/Dropbox/notes/4545",
+		"/Users/chris.mayfield/Dropbox/notes/34",
+		"/Users/chris.mayfield/Dropbox/notes/23",
+		"/Users/chris.mayfield/Dropbox/notes/122",
+		"/Users/chris.mayfield/Dropbox/notes/12",
+		"/Users/chris.mayfield/Dropbox/notes/asassa",
+		"/Users/chris.mayfield/Dropbox/notes/aaaa",
+		"/Users/chris.mayfield/Dropbox/notes/sdsdsd",
+		"/Users/chris.mayfield/Dropbox/notes/zxzxxz",
+		"/Users/chris.mayfield/Dropbox/notes/qqwqw",
+		"/Users/chris.mayfield/Dropbox/notes/ewweewew",
+		"/Users/chris.mayfield/Dropbox/notes/dfgdfdgf",
+		"/Users/chris.mayfield/Dropbox/notes/sdsdfdfs",
+		"/Users/chris.mayfield/Dropbox/notes/qwqqwwq",
+		"/Users/chris.mayfield/Dropbox/notes/asasdasd",
+		"/Users/chris.mayfield/Dropbox/notes/aqqq",
+		"/Users/chris.mayfield/Dropbox/notes/asasasas",
+		"/Users/chris.mayfield/Dropbox/notes/ssdds",
+		"/Users/chris.mayfield/Dropbox/notes/asas",
+		"/Users/chris.mayfield/Dropbox/notes/sdafsdf",
+		"/Users/chris.mayfield/Dropbox/notes/sdafsdfsdf",
+		"/Users/chris.mayfield/Dropbox/notes/sdfsadfasdf",
+		"/Users/chris.mayfield/Dropbox/notes/sadfsdafsdf",
+		"/Users/chris.mayfield/Dropbox/notes/sdafsdfasdf",
+		"/Users/chris.mayfield/Dropbox/notes/dsafsdf",
+		"/Users/chris.mayfield/Dropbox/notes/sdafsdfsdaf",
+		"/Users/chris.mayfield/Dropbox/notes/sddsfdfs",
+		"/Users/chris.mayfield/Dropbox/notes/sdsdfasdf",
+		"/Users/chris.mayfield/Dropbox/notes/sdfsdadfsdfs",
+		"/Users/chris.mayfield/Dropbox/notes/fdsdafsdfdsa",
+		"/Users/chris.mayfield/Dropbox/notes/sdfsadf",
+		"/Users/chris.mayfield/Dropbox/notes/sdfsadfsdf",
+		"/Volumes/UNTITLED/not_found.sql",
+		"/Users/chris.mayfield/Downloads/delta-index-merge-data (1).ctl"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"doWander",
+			"tile",
+			"    ",
+			"                          ",
+			",",
+			"•\t",
+			"nj1",
+			"am-stg-rls02.nj1.afcv.net",
+			"nj1",
+			"am-stg-rls02.nj1.afcv.net",
+			".ut1",
+			"am-stg-rls02.nj1.afcv.net",
+			"localhost",
+			"ac-solr01.nj1.afcv.net",
+			"ac-qal-solr02.nj1.afcv.net",
+			"  ",
+			"\t",
+			"><",
+			"   ",
+			"><",
+			"<",
+			"\\t",
+			"\\n",
+			";",
+			"http",
+			".nj1.",
+			"am-qal-solr01.nj1.afcv.net",
+			";",
+			".nj1.",
+			",",
+			"nj",
+			".keep",
+			" -",
+			"home",
+			" /",
+			"am-solr",
+			" -",
+			"898",
+			"\\",
+			"-",
+			" -",
+			" ",
+			";",
+			"cd",
+			"#",
+			"git ",
+			"cd ",
+			"# ",
+			"8985",
+			"/8983",
+			"><",
+			";",
+			"nj1",
+			"zkb",
+			"zk",
+			"cd ",
+			":",
+			"core-hemingway",
+			",",
+			"core-piqa-2016Jan202253",
+			"core-image-2016Jan202253",
+			" core-image-2016Jan202253\n",
+			"core-fcc-2016Jan202251",
+			"201601",
+			";",
+			"echo",
+			"avc",
+			"\t",
+			";",
+			",",
+			";",
+			"|",
+			"'",
+			"\"",
+			";",
+			"/phaser/",
+			"/phaser",
+			"site",
+			"wa-en-collection-2016Jan281719",
+			"workflow_12904",
+			"-",
+			" ",
+			"colo",
+			"zkport",
+			"2181",
+			"env",
+			"emr_job_id",
+			"echo geosolrb",
+			"nj",
+			"ut1",
+			"geosolr",
+			"ut1",
+			";",
+			"rr",
+			"123",
+			"am-geosolr01.nj1.afcv.net",
+			"\\\\\\/",
+			"\\\"",
+			"\\",
+			"ut1",
+			"ut",
+			";",
+			"test",
+			"+ ",
+			"sudo",
+			"Users",
+			"/Users",
+			"Users",
+			"this",
+			"Execution times:",
+			"min:    2.16 seconds",
+			"Execution times:",
+			"SET:",
+			"Success.",
+			" Success.",
+			"(total time",
+			"Execution times:",
+			"        INSERT:\n",
+			"        SET:",
+			"            Execution times:\n",
+			"INSERT:",
+			">     ",
+			">",
+			"beans",
+			"Uninstall",
+			" Plugin",
+			"nj1",
+			"am-qal-solr01.nj1.afcv.net"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
