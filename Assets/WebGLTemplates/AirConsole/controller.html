@@ -164,10 +164,6 @@
        this.airconsole.navigateHome();
     };
     
-    App.prototype.navigateToPong = function() {
-       this.airconsole.navigateTo("http://games.airconsole.com/pong/");
-    };
-    
     App.prototype.tellScreenToShowAd = function() {
        this.airconsole.message(AirConsole.SCREEN, "show_ad");
     };
@@ -194,8 +190,7 @@
          <button class="button button-left" ontouchstart="window.app.hideDefaultUI()">Hide Default UI</button>
          <button class="button button-right" ontouchstart="window.app.showDefaultUI()">Show Default UI</button>
          <button class="button button-left" ontouchstart="window.app.navigateHome()">Navigate Home </button>
-         <button class="button button-right" ontouchstart="window.app.navigateToPong()">Navigate to Pong</button>
-         <button class="button" ontouchstart="window.app.tellScreenToShowAd()">Tell Screen to show an ad</button>
+		 <button class="button" ontouchstart="window.app.tellScreenToShowAd()">Tell Screen to show an ad</button>
         </div>
         
     </div>
