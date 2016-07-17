@@ -1158,7 +1158,7 @@ namespace NDream.AirConsole {
 						Debug.Log("getLaunchIntentForPackage for " + gameId + " failed");
 					}
 				}
-				if (launchIntent != null && gameId != Application.bundleIdentifier) {
+				if (launchIntent != null) {
 					ca.Call("startActivity", launchIntent);
 				} else {
 					Application.OpenURL("market://details?id=" + gameId);

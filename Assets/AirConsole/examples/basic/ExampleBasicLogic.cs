@@ -339,10 +339,10 @@ public class ExampleBasicLogic : MonoBehaviour {
 		logWindow.text = logWindow.text.Insert (0, "Navigated back to home screen" + "\n \n");
 	}
 
-//	public void NavigateToPong () {
-//		//Navigate to another game
-//		AirConsole.instance.NavigateTo ("./pong/");
-//	}
+	public void NavigateToPong () {
+		//Navigate to another game
+		AirConsole.instance.NavigateTo ("http://games.airconsole.com/pong/");
+	}
 
 	public void ShowAd () {
 		//Display an Advertisement

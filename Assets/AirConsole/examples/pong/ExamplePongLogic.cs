@@ -4,14 +4,19 @@ using System.Collections;
 using System.Collections.Generic;
 using NDream.AirConsole;
 using Newtonsoft.Json.Linq;
+using UnityEngine.SceneManagement;
 
 public class ExamplePongLogic : MonoBehaviour {
 
 	public Rigidbody2D racketLeft;
 	public Rigidbody2D racketRight;
 	public Rigidbody2D ball;
+	public Renderer profilePicturePlaneRenderer_left;
+	public Renderer profilePicturePlaneRenderer_right;
+
 	public float ballSpeed = 10f;
 	public Text uiText;
+	public Text uiTextDebug;
 	private int scoreRacketLeft = 0;
 	private int scoreRacketRight = 0;
 
@@ -19,6 +24,10 @@ public class ExamplePongLogic : MonoBehaviour {
 		AirConsole.instance.onMessage += OnMessage;
 		AirConsole.instance.onConnect += OnConnect;
 		AirConsole.instance.onDisconnect += OnDisconnect;
+		AirConsole.instance.onDeviceProfileChange += OnDeviceProfileChange;
+		uiTextDebug.text = "Connecting... \n \n";
+
+
 	}
 
 	/// <summary>
@@ -48,7 +57,7 @@ public class ExamplePongLogic : MonoBehaviour {
 		int active_player = AirConsole.instance.ConvertDeviceIdToPlayerNumber (device_id);
 		if (active_player != -1) {
 			if (AirConsole.instance.GetControllerDeviceIds ().Count >= 2) {
-				StartGame ();
+				StartGame (scoreRacketLeft,scoreRacketRight);
 			} else {
 				AirConsole.instance.SetActivePlayers (0);
 				ResetBall (false);
@@ -74,12 +83,12 @@ public class ExamplePongLogic : MonoBehaviour {
 		}
 	}
 
-	void StartGame () {
+	void StartGame (int scoreRacketLeft = 0, int scoreRacketRight = 0) {
 		AirConsole.instance.SetActivePlayers (2);
 		ResetBall (true);
-		scoreRacketLeft = 0;
-		scoreRacketRight = 0;
 		UpdateScoreUI ();
+		DisplayProfilePictureOfFirstController ();
+		DisplayProfilePictureOfSecondController ();
 	}
 
 	void ResetBall (bool move) {
@@ -99,6 +108,56 @@ public class ExamplePongLogic : MonoBehaviour {
 	void UpdateScoreUI () {
 		// update text canvas
 		uiText.text = scoreRacketLeft + ":" + scoreRacketRight;
+		Scene scene = SceneManager.GetActiveScene();
+
+		//Debug.Log("Active scene is '" + scene.name + "'.");
+//		if (scoreRacketLeft > 2 ) {
+//			StartGame ();
+//		}
+
+	}
+	private IEnumerator DisplayUrlPicture (string url, Renderer profilePicturePlaneRenderer ) {
+		// Start a download of the given URL
+		WWW www = new WWW (url);
+
+		// Wait for download to complete
+		yield return www;
+
+		// assign texture
+		profilePicturePlaneRenderer.material.mainTexture = www.texture;
+		Color color = Color.white;
+		color.a = 1;
+		profilePicturePlaneRenderer.material.color = color;
+
+		//yield return new WaitForSeconds (3.0f);
+
+		//color.a = 0;
+		//profilePicturePlaneRenderer.material.color = color;
+
+	}
+
+	public void DisplayProfilePictureOfFirstController () {
+		//We cannot assume that the first controller's device ID is '1', because device 1 
+		//might have left and now the first controller in the list has a different ID.
+		//Never hardcode device IDs!		
+		int idOfFirstController = AirConsole.instance.GetControllerDeviceIds () [0];
+
+		string urlOfProfilePic = AirConsole.instance.GetProfilePicture (idOfFirstController, 512);
+		//Log url to on-screen Console
+		Debug.Log ("URL of Profile Picture of first Controller: " + urlOfProfilePic + "\n \n");
+		StartCoroutine (DisplayUrlPicture (urlOfProfilePic, profilePicturePlaneRenderer_left ));
+	}
+
+	public void DisplayProfilePictureOfSecondController () {
+		//We cannot assume that the first controller's device ID is '1', because device 1 
+		//might have left and now the first controller in the list has a different ID.
+		//Never hardcode device IDs!		
+		int idOfSecondController = AirConsole.instance.GetControllerDeviceIds () [1];
+
+		string urlOfProfilePic = AirConsole.instance.GetProfilePicture (idOfSecondController, 512);
+		//Log url to on-screen Console
+		Debug.Log ("URL of Profile Picture of Second Controller: " + urlOfProfilePic + "\n \n");
+		StartCoroutine (DisplayUrlPicture (urlOfProfilePic, profilePicturePlaneRenderer_right ));
 	}
 
 	void FixedUpdate () {
@@ -123,5 +182,9 @@ public class ExamplePongLogic : MonoBehaviour {
 		if (AirConsole.instance != null) {
 			AirConsole.instance.onMessage -= OnMessage;
 		}
+	}
+	void OnDeviceProfileChange (int device_id) {
+		//Log to on-screen Console
+		uiTextDebug.text = uiTextDebug.text.Insert (0, "Device " + device_id + " made changes to its profile. \n \n");
 	}
 }
