@@ -13,6 +13,7 @@ public class ExamplePongLogic : MonoBehaviour {
 	public Rigidbody2D ball;
 	public Renderer profilePicturePlaneRenderer_left;
 	public Renderer profilePicturePlaneRenderer_right;
+	public SpriteRenderer logo;
 
 	public float ballSpeed = 10f;
 	public Text uiText;
@@ -25,7 +26,7 @@ public class ExamplePongLogic : MonoBehaviour {
 		AirConsole.instance.onConnect += OnConnect;
 		AirConsole.instance.onDisconnect += OnDisconnect;
 		AirConsole.instance.onDeviceProfileChange += OnDeviceProfileChange;
-		uiTextDebug.text = "Connecting... \n \n";
+//		uiTextDebug.text = "Connecting... \n \n";
 
 
 	}
@@ -82,13 +83,20 @@ public class ExamplePongLogic : MonoBehaviour {
 			}
 		}
 	}
-
+	void ShowLogo () {
+		logo.enabled = true;
+	}
+	void RemoveLogo () {
+		logo.enabled = false;
+	}
 	void StartGame (int scoreRacketLeft = 0, int scoreRacketRight = 0) {
+		ShowLogo ();
 		AirConsole.instance.SetActivePlayers (2);
-		ResetBall (true);
 		UpdateScoreUI ();
 		DisplayProfilePictureOfFirstController ();
 		DisplayProfilePictureOfSecondController ();
+		RemoveLogo ();
+		ResetBall (true);
 	}
 
 	void ResetBall (bool move) {
@@ -108,7 +116,7 @@ public class ExamplePongLogic : MonoBehaviour {
 	void UpdateScoreUI () {
 		// update text canvas
 		uiText.text = scoreRacketLeft + ":" + scoreRacketRight;
-		Scene scene = SceneManager.GetActiveScene();
+		//Scene scene = SceneManager.GetActiveScene();
 
 		//Debug.Log("Active scene is '" + scene.name + "'.");
 //		if (scoreRacketLeft > 2 ) {
@@ -160,7 +168,13 @@ public class ExamplePongLogic : MonoBehaviour {
 		StartCoroutine (DisplayUrlPicture (urlOfProfilePic, profilePicturePlaneRenderer_right ));
 	}
 
-	void FixedUpdate () {
+	void update () {
+		if ( Input.GetKeyDown(KeyCode.Escape) )
+			{
+				Time.timeScale = 0;
+					Application.LoadLevelAdditive("menu");
+				
+			}
 
 		// check if ball reached one of the ends
 		if (this.ball.position.x < -9f) {
