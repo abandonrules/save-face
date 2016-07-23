@@ -20,17 +20,21 @@ public class ExamplePongLogic : MonoBehaviour {
 	public Text uiTextDebug;
 	private int scoreRacketLeft = 0;
 	private int scoreRacketRight = 0;
+	void OnGUI() {
+		if (GUILayout.Button("Press Me"))
+			Debug.Log("Hello!");
+	}
 
 	void Awake () {
 		AirConsole.instance.onMessage += OnMessage;
 		AirConsole.instance.onConnect += OnConnect;
 		AirConsole.instance.onDisconnect += OnDisconnect;
 		AirConsole.instance.onDeviceProfileChange += OnDeviceProfileChange;
-//		uiTextDebug.text = "Connecting... \n \n";
+		uiTextDebug.text = "Connecting... \n \n";
 
 
 	}
-
+		
 	/// <summary>
 	/// We start the game if 2 players are connected and the game is not already running (activePlayers == null).
 	/// 
@@ -90,7 +94,7 @@ public class ExamplePongLogic : MonoBehaviour {
 		logo.enabled = false;
 	}
 	void StartGame (int scoreRacketLeft = 0, int scoreRacketRight = 0) {
-		ShowLogo ();
+		//ShowLogo ();
 		AirConsole.instance.SetActivePlayers (2);
 		UpdateScoreUI ();
 		DisplayProfilePictureOfFirstController ();
@@ -167,14 +171,7 @@ public class ExamplePongLogic : MonoBehaviour {
 		Debug.Log ("URL of Profile Picture of Second Controller: " + urlOfProfilePic + "\n \n");
 		StartCoroutine (DisplayUrlPicture (urlOfProfilePic, profilePicturePlaneRenderer_right ));
 	}
-
-	void update () {
-		if ( Input.GetKeyDown(KeyCode.Escape) )
-			{
-				Time.timeScale = 0;
-					Application.LoadLevelAdditive("menu");
-				
-			}
+	void FixedUpdate () {
 
 		// check if ball reached one of the ends
 		if (this.ball.position.x < -9f) {
@@ -189,6 +186,31 @@ public class ExamplePongLogic : MonoBehaviour {
 			ResetBall (true);
 		}
 	}
+
+	void update () {
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Time.timeScale = 0;
+			Application.LoadLevelAdditive ("menu");
+			}
+	}
+	void score (GameObject score) {
+		if(score.name == "ScoreRight")
+			{
+				scoreRacketRight++;
+				UpdateScoreUI ();
+				ResetBall (true);
+
+			}
+			if(score.name == "ScoreLeft")
+			{
+				scoreRacketLeft++;
+				UpdateScoreUI ();
+				ResetBall (true);
+
+			}
+
+		}
+	
 
 	void OnDestroy () {
 
